@@ -61,7 +61,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background-image: url('collage-arriere-plan-programmation_23-2149901771.avif');
+    background-image: url('images/collage-arriere-plan-programmation_23-2149901771.avif');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -92,7 +92,8 @@ body {
 }
 .banner button:hover {
     background-color: var(--hover-color);
-    transform: scale(1.05);
+    letter-spacing: 1px;
+    font-size: 1.201em;
 }
 
 /* Date styles */
@@ -120,6 +121,10 @@ body {
     font-size: 1.6em;
     font-weight: 700;
     box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(206, 143, 17, 0.19);
+}
+.heure h1 {
+    padding-top: 20px;
+    font-size
 }
 
 /* About section styles */
@@ -157,6 +162,38 @@ body {
 .program div:hover {
     transform: scale(1.05);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 12px 40px rgba(63, 81, 181, 0.25);
+}
+.program a{
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: ease 2s;
+    text-decoration: none;
+    transition: ease 1s;
+}
+.program a:hover{
+    background-color: #b31889;
+    font-size:1.3em;
+    letter-spacing: 2px;
+}
+#contact{
+    color:#fff;
+}
+#contact div{
+    
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+
+}
+ box-icon{
+    margin-top: -16px;
+    
 }
 
 /* Fade-in animation */
@@ -209,3 +246,77 @@ body {
         height: auto;
     }
 }
+/* Sponsors section styles */
+/* Sponsors section styles */
+#sponsors {
+    padding: 50px 20px;
+   
+    color: #fff;
+}
+
+#sponsors h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.sponsor-logos {
+    display: flex; /* or display: inline-block; */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.sponsor-logos img {
+    max-width: 100px; /* Adjust the size as needed */
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.sponsor-logos img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* Contact section styles */
+#contact {
+    color: #fff;
+}
+
+#contact div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+box-icon {
+    margin-top: -16px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+  
