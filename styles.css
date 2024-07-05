@@ -1,0 +1,211 @@
+/* Global variables */
+:root {
+    --primary-color: #f4f4f4;
+    --secondary-color: #eb82cf;
+    --hover-color: #b31889;
+    --text-color: #fff;
+    --header-bg-color: #1521c5;
+    --header-border-color: #f10a0a;
+    --blink-color: #fff;
+    --blink-alt-color: #05080e;
+}
+
+/* Body styles */
+body {
+    background-color: var(--primary-color);
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(63,9,121,1) 35%, rgba(81,0,255,1) 100%);
+}
+
+/* Logo styles */
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* Animation styles */
+.tech, .X {
+    animation: blink 2.3s infinite;
+}
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Navbar styles */
+.navbar a {
+    transition: ease 1s;
+    font-weight: 500;
+}
+.navbar a:hover {
+    color: bisque !important;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Section styles */
+.a-propos {
+    width: 100%;
+    height: 100vh;
+}
+
+.section {
+    background-color: rgba(48, 4, 57, 0.7);
+    margin-top: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-image: url('collage-arriere-plan-programmation_23-2149901771.avif');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 20px;
+    width: 70%;
+    height: 60%;
+    box-shadow: 0 10px 20px rgba(90, 24, 182, 0.2), 0 6px 20px rgba(118, 17, 206, 0.19);
+    transition: ease 1s;
+    cursor: pointer;
+}
+
+/* Banner styles */
+.banner h1 {
+    font-size: 1.9em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.banner button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: ease 2s;
+}
+.banner button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+/* Date styles */
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.star {
+    margin-right: 20px;
+}
+.heure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heure div {
+    margin-top: 10px;
+    padding-top: 16px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.6em;
+    font-weight: 700;
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(206, 143, 17, 0.19);
+}
+
+/* About section styles */
+#about {
+    margin-top: 300px;
+    color: #fff;
+}
+
+/* Program section styles */
+.program {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.program h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.program div {
+    background-color: rgba(63, 81, 181, 0.8);
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(63, 81, 181, 0.19);
+    transition: transform 0.3s, box-shadow 0.3s, ease 1s;
+    width: 70%;
+    
+    animation: fadeInUp 1s ease-in-out, colorChange 3s infinite alternate;
+}
+.program div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 12px 40px rgba(63, 81, 181, 0.25);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glow animation */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(63, 81, 181, 0.2);
+    }
+    to {
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 0 60px rgba(63, 81, 181, 0.4);
+    }
+}
+
+/* Media queries */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        text-align: center;
+        padding: 10px;
+    }
+    .navbar-toggler {
+        margin-right: 15px;
+    }
+    .navbar-brand {
+        margin-left: 15px;
+    }
+    .section, .text {
+        width: 90%;
+        height: auto;
+    }
+    .banner h1 {
+        font-size: 1.5em;
+    }
+    .banner button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .text {
+        width: 90%;
+        height: auto;
+    }
+}
